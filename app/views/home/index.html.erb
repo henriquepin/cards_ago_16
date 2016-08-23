@@ -1,1 +1,24 @@
-Olá Time
+<header>
+  <h1>System cards</h1>
+</header>
+
+<section>
+  <h2>Cards de traducao</h2>
+</section>
+
+<section>
+  <p>Aplicacao criada para traduzir algumas expressoes</p><br>
+</section>
+
+<aside>
+  <h3>Outros tradutores</h3>
+  <a href="http://translate.google.com">Google Tradutor</a><br>
+</aside>
+
+
+<section>
+  <h2>Cards em ingles</h2>
+<% @cards.each do |card| %>
+  <a href="<%="cards/#{card.id}" %>"><%= card.front %></a><br>
+<% end %>
+</section>
