@@ -9,6 +9,16 @@
   </head>
 
   <body>
+    <header>
+      <h1>System cards</h1><br>
+      <%= image_tag('simbolo_timao.jpg', width: '100px', alt: "escudo do Corinthians") %>
+    </header>
     <%= yield %>
+    <aside>
+      <h3>Outros tradutores</h3>
+      <%= link_to "Google Tradutor", "http://translate.google.com", target: "_blank" %>
+    </aside><br><br>
+    <footer>
+      <p>Projeto Campus Code</p>
   </body>
 </html>
