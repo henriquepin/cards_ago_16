@@ -10,15 +10,16 @@
 
   <body>
     <header>
-      <h1>System cards</h1><br>
-      <%= image_tag('simbolo_timao.jpg', width: '100px', alt: "escudo do Corinthians") %>
+      <%=link_to "System cards", cards %><br><br>
+      <%= image_tag('tradutor.jpg', width: '300px', alt: "escudo do Corinthians") %>
     </header>
     <%= yield %>
     <aside>
       <h3>Outros tradutores</h3>
+      <%= image_tag('google_tradutor_icon.png', width: '80px', alt: "icone google tradutor") %><br>
       <%= link_to "Google Tradutor", "http://translate.google.com", target: "_blank" %>
     </aside><br><br>
     <footer>
-      <p>Projeto Campus Code</p>
+      <p><h5>Projeto Campus Code - firts app</h5></p>
   </body>
 </html>
