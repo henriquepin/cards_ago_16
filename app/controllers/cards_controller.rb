@@ -31,6 +31,7 @@ class CardsController < ApplicationController
     redirect_to root_url
   end
 
+
   private
   def card_parameters
     params.require(:card).permit(:front, :back)
