@@ -5,4 +5,12 @@
 <section>
   <h3>Expressao em portugues:</h3><%= @card.front %><br>
   <h3>Expressao em ingles:</h3><%= @card.back %>
+  <p><%= link_to edit_card_path(@card) do %>
+  <button>Editar</button>
+  <%end%></p>
+  <%= link_to @card, method: :delete do %>
+  <button>Deletar</button>
+  <%end%>
+
+
 </section>
