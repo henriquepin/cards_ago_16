@@ -3,14 +3,32 @@
 </header>
 
 <section>
-  <h3>Expressao em portugues:</h3><%= @card.front %><br>
-  <h3>Expressao em ingles:</h3><%= @card.back %>
+  <h3>Expressao em portugues:</h3><%= @card.descricao_amigavel %><br>
+  <h3>Expressao em ingles:</h3><%= @card.descricao_amigavel %>
+  <p>Enviado por: <%= @card.author %></p>
   <p><%= link_to edit_card_path(@card) do %>
   <button>Editar</button>
   <%end%></p>
+
   <%= link_to @card, method: :delete do %>
   <button>Deletar</button>
-  <%end%>
+  <% end %>
 
+  <% @card.comments.each do |comment| %>
+    <%= comment.author %> comentou:
+    <p><%= comment.body %></p>
+    <% end %>
 
+  <h2>Novo Comentario</h2>
+  <%= form_for [@card, @comment] do |f| %>
+    <div>
+      <%= f.label :author, 'Autor' %>
+      <%= f.text_field :author %>
+    </div>
+    <div>
+      <%= f.label :body, 'Comentario' %>
+      <%= f.text_area :body %>
+    </div>
+    <%= f.submit 'Enviar Comentario' %>
+  <% end %>
 </section>

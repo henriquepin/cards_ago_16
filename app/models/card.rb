@@ -1,6 +1,7 @@
 class Card < ApplicationRecord
-
+  has_many :comments
+  validates :front, presence: true
   def descricao_amigavel
-    "Pt: #{front} -> Eng: #{back}"
+    "PT: #{front} => EN: #{back}"
   end
 end

@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   #get '/', to: 'home#index', as: 'home'
   #get '/cards/:id', to: 'cards#show' =>mesmo codigo criado com resources(linha de codigo abaixo)
   #resources :cards, only: [:show, :index, :new, :create, :edit, :update]
-  resources :cards
+  resources :cards do
+    resources :comments, only:[:create]
+  end
 end

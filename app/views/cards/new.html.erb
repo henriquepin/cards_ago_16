@@ -1,3 +1,4 @@
+<p><%= flash[:alert] %></p>
 <h1>Novo Card</h1>
 <%= form_for(@card) do |f| %>
   <div>
@@ -7,6 +8,10 @@
   <div>
     <%= f.label :back, "Ingles" %>
     <%= f.text_field :back %>
+  </div><br>
+  <div>
+    <%= f.label :author, "Autor" %>
+    <%= f.text_field :author %>
   </div><br>
   <%= f.submit 'Enviar' %>
 <%end%>
