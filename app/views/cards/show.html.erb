@@ -3,19 +3,19 @@
 </header>
 
 <section>
-  <h3>Expressao em portugues:</h3><%= @card.descricao_amigavel %><br>
-  <h3>Expressao em ingles:</h3><%= @card.descricao_amigavel %>
+  <h3>Expressao em portugues:</h3><%= @card.front %><br>
+  <h3>Expressao em ingles:</h3><%= @card.back %>
   <p>Enviado por: <%= @card.author %></p>
   <p><%= link_to edit_card_path(@card) do %>
   <button>Editar</button>
   <%end%></p>
 
   <%= link_to @card, method: :delete do %>
-  <button>Deletar</button>
+  <button>Deletar</button><br>
   <% end %>
 
   <% @card.comments.each do |comment| %>
-    <%= comment.author %> comentou:
+    <p><%= comment.author %> comentou:</p>
     <p><%= comment.body %></p>
     <% end %>
 

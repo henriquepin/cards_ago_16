@@ -9,8 +9,9 @@ feature 'User creates a card' do
     fill_in 'Autor', with: 'Henrique'
     click_on 'Enviar'
 
-    expect(page).to have_content 'PT: Teste => EN: Test'
-    expect(page).to have_content 'Enviado por: Henrique'    
+    expect(page).to have_content 'Teste'
+    expect(page).to have_content 'Test'
+    expect(page).to have_content 'Enviado por: Henrique'
   end
   scenario 'unsuccessfully' do
     visit new_card_path

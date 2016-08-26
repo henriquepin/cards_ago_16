@@ -7,6 +7,7 @@ feature 'User visits a card' do
     #scenario
     visit card_path(card)
     #expectations
-    expect(page).to have_content 'PT: Preto => EN: Black'
+    expect(page).to have_content 'Preto'
+    expect(page).to have_content 'Black'
   end
 end

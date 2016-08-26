@@ -10,7 +10,8 @@ feature 'User comments a card' do
     fill_in 'Comentario', with: 'Obrigado por esse card'
     click_on 'Enviar Comentario'
     #expectations
-    expect(page).to have_content 'PT: Livro => EN: Book'
+    expect(page).to have_content 'Livro'
+    expect(page).to have_content 'Book'
     expect(page).to have_content 'Henrique comentou:'
     expect(page).to have_content 'Obrigado por esse card'
   end
