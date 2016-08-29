@@ -6,7 +6,7 @@ class CardsController < ApplicationController
   end
 
   def index
-    @cards = Card.all
+    @cards = Card.where(published:true)
   end
 
   def new
