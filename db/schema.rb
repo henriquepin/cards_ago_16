@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160826004545) do
+ActiveRecord::Schema.define(version: 20160829163244) do
 
   create_table "cards", force: :cascade do |t|
     t.string   "front"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20160826004545) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "author"
+    t.boolean  "published"
   end
 
   create_table "comments", force: :cascade do |t|
