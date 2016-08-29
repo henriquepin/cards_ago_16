@@ -14,6 +14,7 @@
   <button>Deletar</button><br>
   <% end %>
 
+  <h3>Comentários</h3>
   <% @card.comments.each do |comment| %>
     <p><%= comment.author %> comentou:</p>
     <p><%= comment.body %></p>
